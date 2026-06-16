@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  ::selection{background:#16294A;color:#fff;}
+  @media (max-width:900px){
+    .fs-nav{display:none !important;}
+    .fs-hero-grid{grid-template-columns:1fr !important;gap:36px !important;}
+    .fs-2col{grid-template-columns:1fr !important;gap:36px !important;}
+    .fs-svc-grid{grid-template-columns:repeat(2,1fr) !important;}
+    .fs-svc-grid > div{grid-column:auto !important;}
+    .fs-proc-grid{grid-template-columns:repeat(2,1fr) !important;}
+    .fs-3col{grid-template-columns:repeat(2,1fr) !important;}
+  }
+  @media (max-width:620px){
+    [style*="1200px"]{padding-left:20px !important;padding-right:20px !important;}
+    [style*="104px 32px"]{padding-top:60px !important;padding-bottom:60px !important;}
+    .fs-head-cta{display:none !important;}
+    .fs-svc-grid{grid-template-columns:1fr !important;}
+    .fs-proc-grid{grid-template-columns:1fr !important;}
+    .fs-proc-grid > div{border-right:0 !important;border-bottom:1px solid #EEF0F5 !important;}
+    .fs-proc-grid > div:last-child{border-bottom:0 !important;}
+    .fs-3col{grid-template-columns:1fr !important;}
+    .fs-prob-cards{grid-template-columns:1fr !important;}
+    .fs-dash-row{grid-template-columns:1fr !important;}
+    .fs-trust{flex-direction:column !important;align-items:flex-start !important;gap:13px !important;}
+    .fs-trust > span[style*="width:1px"]{display:none !important;}
+  }
+</style>
+</helmet>
+
+<div data-screen-label="Frontis Shield landing page" style="font-family:'Hanken Grotesk',system-ui,sans-serif;color:#14233B;background:#F6F7F9;-webkit-font-smoothing:antialiased;overflow-x:hidden;">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky;top:0;z-index:40;background:rgba(246,247,249,.82);backdrop-filter:blur(16px);border-bottom:1px solid #E6E9F0;">
+    <div style="max-width:1200px;margin:0 auto;padding:0 32px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:28px;">
+      <a href="#top" style="display:flex;align-items:center;gap:13px;text-decoration:none;">
+        <span style="position:relative;width:30px;height:35px;display:inline-grid;place-items:center;background:linear-gradient(158deg,#1B3556,#0E1D33);clip-path:polygon(50% 0,100% 15%,100% 55%,50% 100%,0 55%,0 15%);box-shadow:0 6px 16px rgba(14,29,51,.28);">
+          <span style="width:9px;height:5px;border-left:2px solid rgba(255,255,255,.92);border-bottom:2px solid rgba(255,255,255,.92);transform:translateY(-1px) rotate(-45deg);"></span>
+        </span>
+        <span style="display:flex;flex-direction:column;line-height:1;">
+          <span style="font-weight:600;font-size:18px;letter-spacing:.01em;color:#14233B;">Frontis Shield</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#8A96A8;margin-top:5px;">A Frontis Company</span>
+        </span>
+      </a>
+      <nav class="fs-nav" style="display:flex;align-items:center;gap:30px;white-space:nowrap;">
+        <a href="#services" style="text-decoration:none;color:#43536B;font-size:14.5px;font-weight:500;">Services</a>
+        <a href="#process" style="text-decoration:none;color:#43536B;font-size:14.5px;font-weight:500;">How It Works</a>
+        <a href="#frameworks" style="text-decoration:none;color:#43536B;font-size:14.5px;font-weight:500;">Frameworks</a>
+        <a href="#industries" style="text-decoration:none;color:#43536B;font-size:14.5px;font-weight:500;">Industries</a>
+        <a href="#about" style="text-decoration:none;color:#43536B;font-size:14.5px;font-weight:500;">About</a>
+        <a href="#contact" style="text-decoration:none;color:#43536B;font-size:14.5px;font-weight:500;">Contact</a>
+      </nav>
+      <a href="#contact" onClick="{{ openModal }}" class="fs-head-cta" style="cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;border-radius:8px;background:#16294A;color:#fff;font-size:14px;font-weight:600;box-shadow:0 8px 20px rgba(14,29,51,.18);" style-hover="background:#1F3A63;">
+        Schedule a Consultation
+      </a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section style="max-width:1200px;margin:0 auto;padding:84px 32px 64px;">
+      <div class="fs-hero-grid" style="display:grid;grid-template-columns:1.02fr 1.05fr;gap:64px;align-items:center;">
+        <!-- left -->
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#2F7C97;margin-bottom:28px;">
+            <span style="width:6px;height:6px;border-radius:50%;background:#2F7C97;"></span>
+            Security &amp; Compliance Advisory
+          </div>
+          <h1 style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(40px,4.6vw,58px);line-height:1.04;letter-spacing:-.018em;margin:0 0 26px;color:#14233B;">
+            Understand risk.<br>Build trust.<br><span style="color:#2F7C97;font-style:italic;font-weight:500;">Prepare with confidence.</span>
+          </h1>
+          <p style="font-size:18px;line-height:1.7;color:#586981;margin:0 0 34px;max-width:520px;">
+            Frontis Shield helps growing companies assess security risk, prepare for SOC&nbsp;2, and deploy practical controls that customers, investors, and auditors can trust.
+          </p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;">
+            <a href="#contact" onClick="{{ openModal }}" style="cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;height:50px;padding:0 26px;border-radius:9px;background:#16294A;color:#fff;font-size:15px;font-weight:600;box-shadow:0 12px 28px rgba(14,29,51,.20);" style-hover="background:#1F3A63;transform:translateY(-1px);">
+              Schedule a Consultation
+              <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span>
+            </a>
+            <a href="#services" style="text-decoration:none;display:inline-flex;align-items:center;gap:9px;height:50px;padding:0 26px;border-radius:9px;background:#fff;color:#16294A;font-size:15px;font-weight:600;border:1px solid #DBE0EA;" style-hover="border-color:#16294A;">
+              Explore Services
+            </a>
+          </div>
+          <div style="display:flex;align-items:center;gap:22px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.04em;color:#8A96A8;">
+            <span style="display:flex;align-items:center;gap:8px;"><span style="color:#3D7A5C;">&#10003;</span> SOC 2 readiness</span>
+            <span style="width:1px;height:13px;background:#D7DCE5;"></span>
+            <span style="display:flex;align-items:center;gap:8px;"><span style="color:#3D7A5C;">&#10003;</span> AI-assisted diagnostics</span>
+            <span style="width:1px;height:13px;background:#D7DCE5;"></span>
+            <span style="display:flex;align-items:center;gap:8px;"><span style="color:#3D7A5C;">&#10003;</span> vCISO advisory</span>
+          </div>
+        </div>
+
+        <!-- right: dashboard -->
+        <div style="background:#fff;border:1px solid #E6E9F0;border-radius:18px;box-shadow:0 30px 70px rgba(20,35,59,.10);overflow:hidden;">
+          <!-- dash header -->
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid #EEF0F5;">
+            <div>
+              <div style="font-weight:600;font-size:15px;color:#14233B;">Executive Risk &amp; Readiness</div>
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;color:#9AA5B5;margin-top:4px;">CONFIDENTIAL &middot; Q3 SOC 2 WINDOW</div>
+            </div>
+            <div style="display:inline-flex;align-items:center;gap:7px;padding:6px 11px;border-radius:20px;background:#EAF1F4;color:#2F7C97;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:500;letter-spacing:.04em;">
+              <span style="width:6px;height:6px;border-radius:50%;background:#2F7C97;"></span> ON TRACK
+            </div>
+          </div>
+          <!-- dash body -->
+          <div style="padding:20px 22px 22px;">
+            <!-- row 1: gauge + soc2 -->
+            <div class="fs-dash-row" style="display:grid;grid-template-columns:1fr 1.15fr;gap:14px;margin-bottom:14px;">
+              <div style="border:1px solid #EAEDF3;border-radius:13px;padding:16px;display:flex;flex-direction:column;align-items:center;background:#FCFCFD;">
+                <div style="align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9AA5B5;">Risk Score</div>
+                <div style="position:relative;width:142px;height:142px;margin-top:6px;">
+                  <svg width="142" height="142" viewBox="0 0 142 142" style="display:block;">
+                    <circle cx="71" cy="71" r="56" fill="none" stroke="#EDEFF4" stroke-width="13"></circle>
+                    <circle cx="71" cy="71" r="56" fill="none" stroke="#16294A" stroke-width="13" stroke-linecap="round" stroke-dasharray="351.86" stroke-dashoffset="{{ gaugeOffset }}" transform="rotate(-90 71 71)"></circle>
+                  </svg>
+                  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                    <span style="font-family:'Source Serif 4',serif;font-size:38px;font-weight:600;color:#14233B;line-height:1;">{{ score }}</span>
+                    <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.08em;color:#586981;margin-top:5px;">/ 100</span>
+                  </div>
+                </div>
+                <div style="margin-top:8px;font-size:12px;font-weight:600;color:#B7791F;">Moderate exposure</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:12px;">
+                <div style="border:1px solid #EAEDF3;border-radius:13px;padding:15px 16px;background:#FCFCFD;">
+                  <div style="display:flex;align-items:baseline;justify-content:space-between;">
+                    <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9AA5B5;">SOC 2 Readiness</span>
+                    <span style="font-family:'Source Serif 4',serif;font-size:26px;font-weight:600;color:#2F7C97;line-height:1;">{{ soc2 }}%</span>
+                  </div>
+                  <div style="height:7px;border-radius:6px;background:#EDEFF4;margin-top:12px;overflow:hidden;">
+                    <div style="height:100%;width:{{ soc2W }};background:linear-gradient(90deg,#2F7C97,#3D9BB8);border-radius:6px;transition:width .15s linear;"></div>
+                  </div>
+                </div>
+                <div style="border:1px solid #EAEDF3;border-radius:13px;padding:15px 16px;background:#FCFCFD;">
+                  <div style="display:flex;align-items:baseline;justify-content:space-between;">
+                    <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9AA5B5;">Evidence Collected</span>
+                    <span style="font-family:'Source Serif 4',serif;font-size:26px;font-weight:600;color:#14233B;line-height:1;">{{ evidence }}%</span>
+                  </div>
+                  <div style="height:7px;border-radius:6px;background:#EDEFF4;margin-top:12px;overflow:hidden;">
+                    <div style="height:100%;width:{{ evidenceW }};background:linear-gradient(90deg,#16294A,#34507A);border-radius:6px;transition:width .15s linear;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- row 2: open gaps -->
+            <div style="border:1px solid #EAEDF3;border-radius:13px;padding:14px 16px;background:#FCFCFD;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;gap:14px;">
+              <div style="display:flex;align-items:baseline;gap:12px;">
+                <span style="font-family:'Source Serif 4',serif;font-size:30px;font-weight:600;color:#14233B;line-height:1;">{{ gaps }}</span>
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9AA5B5;">Open<br>Control Gaps</span>
+              </div>
+              <div style="display:flex;gap:8px;">
+                <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:6px;background:#FAEEEC;color:#B05545;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;">3 High</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:6px;background:#FBF3E6;color:#B7791F;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;">5 Medium</span>
+                <span style="display:inline-flex;align-items:center;gap:5px;padding:4px 9px;border-radius:6px;background:#EAF1F4;color:#2F7C97;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:500;">4 Low</span>
+              </div>
+            </div>
+            <!-- priority actions -->
+            <div style="border:1px solid #EAEDF3;border-radius:13px;padding:14px 16px;background:#FCFCFD;">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#9AA5B5;margin-bottom:10px;">Priority Actions</div>
+              <div style="display:flex;flex-direction:column;gap:0;">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #EEF0F5;">
+                  <span style="font-size:13px;color:#3A4760;">Enable MFA on administrative consoles</span>
+                  <span style="padding:3px 8px;border-radius:5px;background:#FAEEEC;color:#B05545;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;">HIGH</span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-bottom:1px solid #EEF0F5;">
+                  <span style="font-size:13px;color:#3A4760;">Formalize vendor risk review cadence</span>
+                  <span style="padding:3px 8px;border-radius:5px;background:#FBF3E6;color:#B7791F;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;">MEDIUM</span>
+                </div>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;">
+                  <span style="font-size:13px;color:#3A4760;">Complete quarterly access recertification</span>
+                  <span style="padding:3px 8px;border-radius:5px;background:#FBF3E6;color:#B7791F;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:500;">MEDIUM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST STRIP ============ -->
+    <section style="border-top:1px solid #E6E9F0;border-bottom:1px solid #E6E9F0;background:#fff;">
+      <div class="fs-trust" style="max-width:1200px;margin:0 auto;padding:22px 32px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
+        <span style="display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:#43536B;"><span style="color:#2F7C97;font-size:15px;">&#9670;</span> Executive-ready risk reporting</span>
+        <span style="width:1px;height:16px;background:#E2E6ED;"></span>
+        <span style="display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:#43536B;"><span style="color:#2F7C97;font-size:15px;">&#9670;</span> SOC 2 readiness support</span>
+        <span style="width:1px;height:16px;background:#E2E6ED;"></span>
+        <span style="display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:#43536B;"><span style="color:#2F7C97;font-size:15px;">&#9670;</span> AI-assisted diagnostics</span>
+        <span style="width:1px;height:16px;background:#E2E6ED;"></span>
+        <span style="display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:#43536B;"><span style="color:#2F7C97;font-size:15px;">&#9670;</span> Practical control implementation</span>
+        <span style="width:1px;height:16px;background:#E2E6ED;"></span>
+        <span style="display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:500;color:#43536B;"><span style="color:#2F7C97;font-size:15px;">&#9670;</span> Cross-border perspective</span>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section style="max-width:1200px;margin:0 auto;padding:104px 32px;">
+      <div class="fs-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#2F7C97;margin-bottom:18px;">The Challenge</div>
+          <h2 style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(30px,3.4vw,42px);line-height:1.12;letter-spacing:-.015em;margin:0;color:#14233B;">
+            Security and compliance should not slow growth.
+          </h2>
+        </div>
+        <div>
+          <p style="font-size:17px;line-height:1.75;color:#586981;margin:0 0 26px;">
+            As you scale, security becomes a business conversation. Customers send questionnaires, investors run diligence, and buyers ask for SOC&nbsp;2 before they sign. Most teams meet these demands with fragmented tools, unclear ownership, and limited internal resources.
+          </p>
+          <div class="fs-prob-cards" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 15px;border:1px solid #E6E9F0;border-radius:10px;background:#fff;font-size:13.5px;color:#3A4760;font-weight:500;"><span style="width:6px;height:6px;border-radius:50%;background:#B05545;flex-shrink:0;"></span> Customer security reviews</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 15px;border:1px solid #E6E9F0;border-radius:10px;background:#fff;font-size:13.5px;color:#3A4760;font-weight:500;"><span style="width:6px;height:6px;border-radius:50%;background:#B05545;flex-shrink:0;"></span> Investor &amp; M&amp;A diligence</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 15px;border:1px solid #E6E9F0;border-radius:10px;background:#fff;font-size:13.5px;color:#3A4760;font-weight:500;"><span style="width:6px;height:6px;border-radius:50%;background:#B7791F;flex-shrink:0;"></span> SOC 2 &amp; framework requests</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 15px;border:1px solid #E6E9F0;border-radius:10px;background:#fff;font-size:13.5px;color:#3A4760;font-weight:500;"><span style="width:6px;height:6px;border-radius:50%;background:#B7791F;flex-shrink:0;"></span> Fragmented security tooling</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 15px;border:1px solid #E6E9F0;border-radius:10px;background:#fff;font-size:13.5px;color:#3A4760;font-weight:500;"><span style="width:6px;height:6px;border-radius:50%;background:#9AA5B5;flex-shrink:0;"></span> Unclear ownership</div>
+            <div style="display:flex;align-items:center;gap:10px;padding:13px 15px;border:1px solid #E6E9F0;border-radius:10px;background:#fff;font-size:13.5px;color:#3A4760;font-weight:500;"><span style="width:6px;height:6px;border-radius:50%;background:#9AA5B5;flex-shrink:0;"></span> Limited internal resources</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" style="background:#fff;border-top:1px solid #E6E9F0;">
+      <div style="max-width:1200px;margin:0 auto;padding:104px 32px;">
+        <div style="max-width:680px;margin-bottom:52px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#2F7C97;margin-bottom:18px;">What We Do</div>
+          <h2 style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(30px,3.4vw,42px);line-height:1.12;letter-spacing:-.015em;margin:0 0 16px;color:#14233B;">A complete path from risk visibility to audit readiness.</h2>
+          <p style="font-size:17px;line-height:1.7;color:#586981;margin:0;">Five connected services that meet you where you are and take you to a defensible, audit-ready posture.</p>
+        </div>
+        <div class="fs-svc-grid" style="display:grid;grid-template-columns:repeat(6,1fr);gap:16px;">
+          <!-- A -->
+          <div style="grid-column:span 2;border:1px solid #E6E9F0;border-radius:16px;padding:26px;background:#FCFCFD;display:flex;flex-direction:column;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#2F7C97;margin-bottom:18px;">01</div>
+            <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#14233B;">Security Risk Assessment</h3>
+            <p style="font-size:14px;line-height:1.62;color:#586981;margin:0 0 16px;">Identify gaps across people, process, technology, and vendors — with prioritized findings.</p>
+            <ul style="list-style:none;padding:0;margin:auto 0 0;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:13px;color:#43536B;display:flex;gap:9px;"><span style="color:#2F7C97;">&#8226;</span> People, process &amp; technology review</li>
+              <li style="font-size:13px;color:#43536B;display:flex;gap:9px;"><span style="color:#2F7C97;">&#8226;</span> Executive summary &amp; prioritized findings</li>
+            </ul>
+          </div>
+          <!-- B highlighted -->
+          <div style="grid-column:span 2;border:1px solid #1F3556;border-radius:16px;padding:26px;background:linear-gradient(160deg,#1B3354,#0E1D33);display:flex;flex-direction:column;box-shadow:0 24px 50px rgba(14,29,51,.22);">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#7FC0D6;">02</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.1em;padding:3px 8px;border-radius:5px;background:rgba(127,192,214,.16);color:#9FD2E3;">AI-ASSISTED</span>
+            </div>
+            <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#fff;">AI-Assisted Security Diagnostics</h3>
+            <p style="font-size:14px;line-height:1.62;color:#B7C4D6;margin:0 0 16px;">Broad control and configuration review for faster visibility into risk areas.</p>
+            <ul style="list-style:none;padding:0;margin:auto 0 0;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:13px;color:#D3DCE8;display:flex;gap:9px;"><span style="color:#7FC0D6;">&#8226;</span> Broad control &amp; configuration review</li>
+              <li style="font-size:13px;color:#D3DCE8;display:flex;gap:9px;"><span style="color:#7FC0D6;">&#8226;</span> Clear, prioritized remediation roadmap</li>
+            </ul>
+          </div>
+          <!-- C -->
+          <div style="grid-column:span 2;border:1px solid #E6E9F0;border-radius:16px;padding:26px;background:#FCFCFD;display:flex;flex-direction:column;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#2F7C97;margin-bottom:18px;">03</div>
+            <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#14233B;">SOC 2 Readiness</h3>
+            <p style="font-size:14px;line-height:1.62;color:#586981;margin:0 0 16px;">Gap assessment, control mapping, and evidence preparation through to audit support.</p>
+            <ul style="list-style:none;padding:0;margin:auto 0 0;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:13px;color:#43536B;display:flex;gap:9px;"><span style="color:#2F7C97;">&#8226;</span> Gap assessment &amp; control mapping</li>
+              <li style="font-size:13px;color:#43536B;display:flex;gap:9px;"><span style="color:#2F7C97;">&#8226;</span> Policy, evidence &amp; audit readiness</li>
+            </ul>
+          </div>
+          <!-- D -->
+          <div style="grid-column:span 3;border:1px solid #E6E9F0;border-radius:16px;padding:26px;background:#FCFCFD;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#2F7C97;margin-bottom:18px;">04</div>
+            <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#14233B;">Control Implementation</h3>
+            <p style="font-size:14px;line-height:1.62;color:#586981;margin:0 0 16px;">Hands-on deployment of the controls that move your posture, not just document it.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;">
+              <span style="padding:6px 12px;border-radius:7px;background:#F1F3F7;color:#43536B;font-size:12.5px;font-weight:500;">Access management</span>
+              <span style="padding:6px 12px;border-radius:7px;background:#F1F3F7;color:#43536B;font-size:12.5px;font-weight:500;">Vendor risk</span>
+              <span style="padding:6px 12px;border-radius:7px;background:#F1F3F7;color:#43536B;font-size:12.5px;font-weight:500;">Data protection</span>
+              <span style="padding:6px 12px;border-radius:7px;background:#F1F3F7;color:#43536B;font-size:12.5px;font-weight:500;">Incident response</span>
+              <span style="padding:6px 12px;border-radius:7px;background:#F1F3F7;color:#43536B;font-size:12.5px;font-weight:500;">Change management</span>
+              <span style="padding:6px 12px;border-radius:7px;background:#F1F3F7;color:#43536B;font-size:12.5px;font-weight:500;">Logging &amp; monitoring</span>
+            </div>
+          </div>
+          <!-- E -->
+          <div style="grid-column:span 3;border:1px solid #E6E9F0;border-radius:16px;padding:26px;background:#FCFCFD;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#2F7C97;margin-bottom:18px;">05</div>
+            <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#14233B;">vCISO &amp; Compliance Advisory</h3>
+            <p style="font-size:14px;line-height:1.62;color:#586981;margin:0 0 16px;">Fractional security leadership and an ongoing compliance operating rhythm.</p>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;">
+              <li style="font-size:13px;color:#43536B;display:flex;gap:9px;"><span style="color:#2F7C97;">&#8226;</span> Fractional security leadership</li>
+              <li style="font-size:13px;color:#43536B;display:flex;gap:9px;"><span style="color:#2F7C97;">&#8226;</span> Board, investor &amp; customer-facing support</li>
+              <li style="font-size:13px;color:#43536B;display:flex;gap:9px;"><span style="color:#2F7C97;">&#8226;</span> Ongoing compliance operating rhythm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section id="process" style="max-width:1200px;margin:0 auto;padding:104px 32px;">
+      <div style="max-width:680px;margin-bottom:52px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#2F7C97;margin-bottom:18px;">How It Works</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(30px,3.4vw,42px);line-height:1.12;letter-spacing:-.015em;margin:0;color:#14233B;">A disciplined four-step engagement.</h2>
+      </div>
+      <div class="fs-proc-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid #E6E9F0;border-radius:16px;overflow:hidden;background:#fff;">
+        <div style="padding:30px 26px;border-right:1px solid #EEF0F5;">
+          <div style="font-family:'Source Serif 4',serif;font-size:30px;font-weight:600;color:#C7CFDC;margin-bottom:18px;">01</div>
+          <h3 style="font-size:17px;font-weight:600;margin:0 0 9px;color:#14233B;">Discover</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Understand your business, systems, customers, and compliance needs.</p>
+        </div>
+        <div style="padding:30px 26px;border-right:1px solid #EEF0F5;">
+          <div style="font-family:'Source Serif 4',serif;font-size:30px;font-weight:600;color:#C7CFDC;margin-bottom:18px;">02</div>
+          <h3 style="font-size:17px;font-weight:600;margin:0 0 9px;color:#14233B;">Diagnose</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Assess risks, gaps, controls, and readiness against your target frameworks.</p>
+        </div>
+        <div style="padding:30px 26px;border-right:1px solid #EEF0F5;">
+          <div style="font-family:'Source Serif 4',serif;font-size:30px;font-weight:600;color:#C7CFDC;margin-bottom:18px;">03</div>
+          <h3 style="font-size:17px;font-weight:600;margin:0 0 9px;color:#14233B;">Deploy</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Implement practical controls, policies, and evidence workflows that hold up.</p>
+        </div>
+        <div style="padding:30px 26px;background:#FCFCFD;">
+          <div style="font-family:'Source Serif 4',serif;font-size:30px;font-weight:600;color:#2F7C97;margin-bottom:18px;">04</div>
+          <h3 style="font-size:17px;font-weight:600;margin:0 0 9px;color:#14233B;">Assure</h3>
+          <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Support ongoing monitoring, reporting, and audit readiness over time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FRAMEWORKS ============ -->
+    <section id="frameworks" style="background:#fff;border-top:1px solid #E6E9F0;">
+      <div style="max-width:1200px;margin:0 auto;padding:104px 32px;">
+        <div style="display:flex;align-items:end;justify-content:space-between;gap:40px;margin-bottom:48px;flex-wrap:wrap;">
+          <div style="max-width:600px;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#2F7C97;margin-bottom:18px;">Frameworks We Support</div>
+            <h2 style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(30px,3.4vw,42px);line-height:1.12;letter-spacing:-.015em;margin:0;color:#14233B;">Aligned to the standards your buyers ask about.</h2>
+          </div>
+          <p style="font-size:14px;line-height:1.6;color:#8A96A8;max-width:300px;margin:0;font-style:italic;">We help you prepare for and operate against these frameworks — we do not issue certifications.</p>
+        </div>
+        <div class="fs-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+          <div style="border:1px solid #E6E9F0;border-radius:14px;padding:24px;background:#FCFCFD;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;color:#16294A;padding:7px 11px;border:1px solid #DBE0EA;border-radius:8px;display:inline-block;margin-bottom:16px;">SOC 2</div>
+            <h3 style="font-size:16px;font-weight:600;margin:0 0 7px;color:#14233B;">SOC 2 Type I &amp; II</h3>
+            <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Demonstrate security, availability, and confidentiality to your customers.</p>
+          </div>
+          <div style="border:1px solid #E6E9F0;border-radius:14px;padding:24px;background:#FCFCFD;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;color:#16294A;padding:7px 11px;border:1px solid #DBE0EA;border-radius:8px;display:inline-block;margin-bottom:16px;">ISO 27001</div>
+            <h3 style="font-size:16px;font-weight:600;margin:0 0 7px;color:#14233B;">ISO/IEC 27001</h3>
+            <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Stand up and operate an Information Security Management System.</p>
+          </div>
+          <div style="border:1px solid #E6E9F0;border-radius:14px;padding:24px;background:#FCFCFD;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;color:#16294A;padding:7px 11px;border:1px solid #DBE0EA;border-radius:8px;display:inline-block;margin-bottom:16px;">HIPAA</div>
+            <h3 style="font-size:16px;font-weight:600;margin:0 0 7px;color:#14233B;">HIPAA</h3>
+            <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Protect health information and meet safeguard requirements.</p>
+          </div>
+          <div style="border:1px solid #E6E9F0;border-radius:14px;padding:24px;background:#FCFCFD;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;color:#16294A;padding:7px 11px;border:1px solid #DBE0EA;border-radius:8px;display:inline-block;margin-bottom:16px;">ISO 42001</div>
+            <h3 style="font-size:16px;font-weight:600;margin:0 0 7px;color:#14233B;">AI Governance</h3>
+            <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Responsible AI management aligned to ISO/IEC 42001.</p>
+          </div>
+          <div style="border:1px solid #E6E9F0;border-radius:14px;padding:24px;background:#FCFCFD;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;color:#16294A;padding:7px 11px;border:1px solid #DBE0EA;border-radius:8px;display:inline-block;margin-bottom:16px;">VRM</div>
+            <h3 style="font-size:16px;font-weight:600;margin:0 0 7px;color:#14233B;">Vendor Risk Management</h3>
+            <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Assess and monitor the third parties in your supply chain.</p>
+          </div>
+          <div style="border:1px solid #E6E9F0;border-radius:14px;padding:24px;background:#FCFCFD;" style-hover="border-color:#C7CFDC;">
+            <div style="font-family:'IBM Plex Mono',monospace;font-weight:500;font-size:13px;color:#16294A;padding:7px 11px;border:1px solid #DBE0EA;border-radius:8px;display:inline-block;margin-bottom:16px;">COMPLIANCE OPS</div>
+            <h3 style="font-size:16px;font-weight:600;margin:0 0 7px;color:#14233B;">Compliance Operations</h3>
+            <p style="font-size:13.5px;line-height:1.6;color:#586981;margin:0;">Keep evidence current and controls operating between audits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INDUSTRIES ============ -->
+    <section id="industries" style="max-width:1200px;margin:0 auto;padding:104px 32px;">
+      <div style="max-width:680px;margin-bottom:48px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#2F7C97;margin-bottom:18px;">Who We Serve</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(30px,3.4vw,42px);line-height:1.12;letter-spacing:-.015em;margin:0;color:#14233B;">Built for companies where trust is part of the product.</h2>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;">
+        <div style="flex:1 1 230px;border:1px solid #E6E9F0;border-radius:12px;padding:20px 22px;background:#fff;"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#9AA5B5;margin-bottom:8px;">SECTOR</div><div style="font-size:16px;font-weight:600;color:#14233B;">SaaS &amp; Cloud</div></div>
+        <div style="flex:1 1 230px;border:1px solid #E6E9F0;border-radius:12px;padding:20px 22px;background:#fff;"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#9AA5B5;margin-bottom:8px;">SECTOR</div><div style="font-size:16px;font-weight:600;color:#14233B;">Healthcare</div></div>
+        <div style="flex:1 1 230px;border:1px solid #E6E9F0;border-radius:12px;padding:20px 22px;background:#fff;"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#9AA5B5;margin-bottom:8px;">SECTOR</div><div style="font-size:16px;font-weight:600;color:#14233B;">Fintech</div></div>
+        <div style="flex:1 1 230px;border:1px solid #E6E9F0;border-radius:12px;padding:20px 22px;background:#fff;"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#9AA5B5;margin-bottom:8px;">SECTOR</div><div style="font-size:16px;font-weight:600;color:#14233B;">AI Companies</div></div>
+        <div style="flex:1 1 230px;border:1px solid #E6E9F0;border-radius:12px;padding:20px 22px;background:#fff;"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#9AA5B5;margin-bottom:8px;">SECTOR</div><div style="font-size:16px;font-weight:600;color:#14233B;">E-Commerce</div></div>
+        <div style="flex:1 1 230px;border:1px solid #E6E9F0;border-radius:12px;padding:20px 22px;background:#fff;"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#9AA5B5;margin-bottom:8px;">SECTOR</div><div style="font-size:16px;font-weight:600;color:#14233B;">Professional Services</div></div>
+        <div style="flex:1 1 230px;border:1px solid #E6E9F0;border-radius:12px;padding:20px 22px;background:#fff;"><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;color:#9AA5B5;margin-bottom:8px;">SECTOR</div><div style="font-size:16px;font-weight:600;color:#14233B;">Cross-Border Businesses</div></div>
+      </div>
+    </section>
+
+    <!-- ============ EXECUTIVE VALUE ============ -->
+    <section id="about" style="background:#fff;border-top:1px solid #E6E9F0;">
+      <div style="max-width:1200px;margin:0 auto;padding:104px 32px;">
+        <div class="fs-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#2F7C97;margin-bottom:18px;">For Leadership</div>
+            <h2 style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(30px,3.4vw,42px);line-height:1.12;letter-spacing:-.015em;margin:0 0 18px;color:#14233B;">Built for leadership decisions, not just technical checklists.</h2>
+            <p style="font-size:17px;line-height:1.7;color:#586981;margin:0;">We translate complex security and compliance work into clear business action — so your team, your board, and your customers all see the same picture.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0;border:1px solid #E6E9F0;border-radius:16px;overflow:hidden;background:#FCFCFD;">
+            <div style="display:flex;align-items:center;gap:15px;padding:20px 22px;border-bottom:1px solid #EEF0F5;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#2F7C97;width:22px;flex-shrink:0;">01</span><span style="font-size:15px;font-weight:600;color:#14233B;">Clear risk visibility</span></div>
+            <div style="display:flex;align-items:center;gap:15px;padding:20px 22px;border-bottom:1px solid #EEF0F5;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#2F7C97;width:22px;flex-shrink:0;">02</span><span style="font-size:15px;font-weight:600;color:#14233B;">Business-prioritized remediation</span></div>
+            <div style="display:flex;align-items:center;gap:15px;padding:20px 22px;border-bottom:1px solid #EEF0F5;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#2F7C97;width:22px;flex-shrink:0;">03</span><span style="font-size:15px;font-weight:600;color:#14233B;">Customer &amp; investor confidence</span></div>
+            <div style="display:flex;align-items:center;gap:15px;padding:20px 22px;border-bottom:1px solid #EEF0F5;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#2F7C97;width:22px;flex-shrink:0;">04</span><span style="font-size:15px;font-weight:600;color:#14233B;">Audit-ready documentation</span></div>
+            <div style="display:flex;align-items:center;gap:15px;padding:20px 22px;"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#2F7C97;width:22px;flex-shrink:0;">05</span><span style="font-size:15px;font-weight:600;color:#14233B;">Practical next steps for lean teams</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section id="contact" style="background:linear-gradient(165deg,#16294A,#0C1A30);">
+      <div style="max-width:1200px;margin:0 auto;padding:96px 32px;text-align:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#7FC0D6;margin-bottom:22px;">Get Started</div>
+        <h2 style="font-family:'Source Serif 4',serif;font-weight:500;font-size:clamp(32px,4vw,50px);line-height:1.08;letter-spacing:-.018em;margin:0 auto 18px;color:#fff;max-width:760px;">Ready to turn security readiness into business trust?</h2>
+        <p style="font-size:18px;line-height:1.65;color:#AEBDD1;margin:0 auto 34px;max-width:520px;">Start with a focused assessment and a clear roadmap.</p>
+        <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+          <a href="#contact" onClick="{{ openModal }}" style="cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 30px;border-radius:9px;background:#fff;color:#16294A;font-size:15px;font-weight:600;box-shadow:0 14px 34px rgba(0,0,0,.28);" style-hover="transform:translateY(-1px);">
+            Schedule a Consultation <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span>
+          </a>
+          <a href="#services" style="text-decoration:none;display:inline-flex;align-items:center;gap:9px;height:52px;padding:0 30px;border-radius:9px;background:transparent;color:#fff;font-size:15px;font-weight:600;border:1px solid rgba(255,255,255,.28);" style-hover="border-color:#fff;">
+            View Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer style="background:#0C1A30;border-top:1px solid rgba(255,255,255,.08);">
+      <div style="max-width:1200px;margin:0 auto;padding:40px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:12px;">
+          <span style="position:relative;width:26px;height:30px;display:inline-grid;place-items:center;background:linear-gradient(158deg,#1B3556,#0E1D33);clip-path:polygon(50% 0,100% 15%,100% 55%,50% 100%,0 55%,0 15%);border:1px solid rgba(255,255,255,.14);">
+            <span style="width:8px;height:4px;border-left:2px solid rgba(255,255,255,.85);border-bottom:2px solid rgba(255,255,255,.85);transform:translateY(-1px) rotate(-45deg);"></span>
+          </span>
+          <span style="color:#fff;font-weight:600;font-size:15px;">Frontis Shield</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:#6B7C93;margin-left:4px;">A FRONTIS COMPANY</span>
+        </div>
+        <div style="font-size:13px;color:#7C8CA3;">&copy; 2026 Frontis Shield &middot; Security, compliance &amp; trust advisory for growing companies.</div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ============ CONSULTATION MODAL ============ -->
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeModal }}" style="position:fixed;inset:0;z-index:80;background:rgba(8,18,33,.55);backdrop-filter:blur(6px);display:flex;align-items:flex-start;justify-content:center;padding:40px 20px;overflow-y:auto;">
+      <div onClick="{{ stopProp }}" style="width:100%;max-width:540px;background:#fff;border-radius:18px;box-shadow:0 40px 100px rgba(8,18,33,.45);overflow:hidden;margin:auto;">
+        <!-- modal header -->
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:26px 28px 0;">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#2F7C97;margin-bottom:10px;">Schedule a Consultation</div>
+            <h3 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:25px;line-height:1.15;margin:0;color:#14233B;">Tell us where you are.</h3>
+          </div>
+          <button onClick="{{ closeModal }}" aria-label="Close" style="flex-shrink:0;width:34px;height:34px;border:1px solid #E6E9F0;background:#fff;border-radius:9px;cursor:pointer;color:#586981;font-size:17px;line-height:1;display:flex;align-items:center;justify-content:center;" style-hover="border-color:#C7CFDC;color:#14233B;">&times;</button>
+        </div>
+
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <!-- success -->
+          <div style="padding:30px 28px 34px;text-align:center;">
+            <div style="width:54px;height:54px;border-radius:50%;background:#EAF3EE;display:flex;align-items:center;justify-content:center;margin:14px auto 18px;">
+              <span style="width:18px;height:10px;border-left:3px solid #3D7A5C;border-bottom:3px solid #3D7A5C;transform:translateY(-2px) rotate(-45deg);"></span>
+            </div>
+            <h4 style="font-family:'Source Serif 4',serif;font-weight:600;font-size:21px;margin:0 0 10px;color:#14233B;">Your request is ready to send.</h4>
+            <p style="font-size:14.5px;line-height:1.65;color:#586981;margin:0 auto 22px;max-width:380px;">We've opened your email client with the details addressed to <strong style="color:#16294A;"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7910171f16391f0b16170d100a1e15161b1815571a1614">[email&#160;protected]</a></strong>. Just hit send — we'll reply within one business day.</p>
+            <p style="font-size:12.5px;line-height:1.6;color:#8A96A8;margin:0 auto 22px;max-width:380px;">Nothing opened? Email us directly at <a href="/cdn-cgi/l/email-protection#1f767179705f796d70716b766c7873707d7e73317c7072" style="color:#2F7C97;text-decoration:none;font-weight:600;"><span class="__cf_email__" data-cfemail="6d04030b022d0b1f020319041e0a01020f0c01430e0200">[email&#160;protected]</span></a>.</p>
+            <button onClick="{{ closeModal }}" style="height:46px;padding:0 26px;border-radius:9px;border:0;background:#16294A;color:#fff;font-size:14.5px;font-weight:600;cursor:pointer;font-family:inherit;" style-hover="background:#1F3A63;">Done</button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showForm }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submitForm }}" style="padding:22px 28px 28px;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+              <label style="display:flex;flex-direction:column;gap:7px;">
+                <span style="font-size:12.5px;font-weight:600;color:#43536B;">Full name</span>
+                <input name="name" required="required" placeholder="Jane Doe" style="height:44px;padding:0 13px;border:1px solid #DBE0EA;border-radius:9px;font-size:14px;font-family:inherit;color:#14233B;outline:none;" style-focus="border-color:#2F7C97;box-shadow:0 0 0 3px rgba(47,124,151,.12);">
+              </label>
+              <label style="display:flex;flex-direction:column;gap:7px;">
+                <span style="font-size:12.5px;font-weight:600;color:#43536B;">Work email</span>
+                <input name="email" type="email" required="required" placeholder="jane@company.com" style="height:44px;padding:0 13px;border:1px solid #DBE0EA;border-radius:9px;font-size:14px;font-family:inherit;color:#14233B;outline:none;" style-focus="border-color:#2F7C97;box-shadow:0 0 0 3px rgba(47,124,151,.12);">
+              </label>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+              <label style="display:flex;flex-direction:column;gap:7px;">
+                <span style="font-size:12.5px;font-weight:600;color:#43536B;">Company</span>
+                <input name="company" required="required" placeholder="Company, Inc." style="height:44px;padding:0 13px;border:1px solid #DBE0EA;border-radius:9px;font-size:14px;font-family:inherit;color:#14233B;outline:none;" style-focus="border-color:#2F7C97;box-shadow:0 0 0 3px rgba(47,124,151,.12);">
+              </label>
+              <label style="display:flex;flex-direction:column;gap:7px;">
+                <span style="font-size:12.5px;font-weight:600;color:#43536B;">Role <span style="color:#9AA5B5;font-weight:400;">(optional)</span></span>
+                <input name="role" placeholder="CEO, CTO, COO…" style="height:44px;padding:0 13px;border:1px solid #DBE0EA;border-radius:9px;font-size:14px;font-family:inherit;color:#14233B;outline:none;" style-focus="border-color:#2F7C97;box-shadow:0 0 0 3px rgba(47,124,151,.12);">
+              </label>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;">
+              <span style="font-size:12.5px;font-weight:600;color:#43536B;">Primary interest</span>
+              <select name="interest" style="height:44px;padding:0 13px;border:1px solid #DBE0EA;border-radius:9px;font-size:14px;font-family:inherit;color:#14233B;outline:none;background:#fff;" style-focus="border-color:#2F7C97;box-shadow:0 0 0 3px rgba(47,124,151,.12);">
+                <option>SOC 2 Readiness</option>
+                <option>Security Risk Assessment</option>
+                <option>AI-Assisted Security Diagnostics</option>
+                <option>Control Implementation</option>
+                <option>vCISO &amp; Compliance Advisory</option>
+                <option>Not sure yet \u2014 need guidance</option>
+              </select>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:7px;margin-bottom:20px;">
+              <span style="font-size:12.5px;font-weight:600;color:#43536B;">What would you like to achieve? <span style="color:#9AA5B5;font-weight:400;">(optional)</span></span>
+              <textarea name="message" rows="3" placeholder="A customer is asking for our SOC 2 report, and we'd like to be audit-ready by Q4…" style="padding:11px 13px;border:1px solid #DBE0EA;border-radius:9px;font-size:14px;font-family:inherit;color:#14233B;outline:none;resize:vertical;line-height:1.5;" style-focus="border-color:#2F7C97;box-shadow:0 0 0 3px rgba(47,124,151,.12);"></textarea>
+            </label>
+            <button type="submit" style="width:100%;height:50px;border:0;border-radius:9px;background:#16294A;color:#fff;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:9px;box-shadow:0 12px 28px rgba(14,29,51,.20);" style-hover="background:#1F3A63;">
+              Send request <span style="font-family:'IBM Plex Mono',monospace;">&rarr;</span>
+            </button>
+            <p style="font-size:11.5px;line-height:1.55;color:#9AA5B5;text-align:center;margin:14px 0 0;">Sends to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="375e5951587751455859435e44505b5855565b1954585a">[email&#160;protected]</a> via your email client. No data is stored.</p>
+          </form>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { score: 0, soc2: 0, evidence: 0, gaps: 0, modalOpen: false, sent: false };
+
+  componentDidMount() {
+    const targets = { score: 72, soc2: 84, evidence: 76, gaps: 12 };
+    const dur = 1150;
+    const start = Date.now();
+    this._timer = setInterval(() => {
+      const p = Math.min(1, (Date.now() - start) / dur);
+      const e = 1 - Math.pow(1 - p, 3);
+      this.setState({
+        score: Math.round(targets.score * e),
+        soc2: Math.round(targets.soc2 * e),
+        evidence: Math.round(targets.evidence * e),
+        gaps: Math.round(targets.gaps * e),
+      });
+      if (p >= 1) clearInterval(this._timer);
+    }, 33);
+  }
+
+  componentWillUnmount() {
+    if (this._timer) clearInterval(this._timer);
+  }
+
+  openModal = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    this.setState({ modalOpen: true, sent: false });
+  };
+
+  closeModal = (e) => {
+    if (e && e.preventDefault) e.preventDefault();
+    this.setState({ modalOpen: false });
+  };
+
+  stopProp = (e) => { e.stopPropagation(); };
+
+  submitForm = (e) => {
+    e.preventDefault();
+    const f = e.target;
+    const get = (n) => (f.elements[n] && f.elements[n].value || '').trim();
+    const name = get('name');
+    const email = get('email');
+    const company = get('company');
+    const role = get('role');
+    const interest = get('interest');
+    const message = get('message');
+
+    const subject = 'Consultation request — ' + (company || name || 'Frontis Shield');
+    const lines = [
+      'New consultation request via the Frontis Shield website.',
+      '',
+      'Name:     ' + name,
+      'Email:    ' + email,
+      'Company:  ' + company,
+      'Role:     ' + (role || '—'),
+      'Interest: ' + interest,
+      '',
+      'Goals / context:',
+      (message || '—'),
+      '',
+      '—',
+      'Please reply within one business day.'
+    ];
+    const href = 'mailto:info@frontisglobal.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(lines.join('\n'));
+
+    try {
+      window.location.href = href;
+    } catch (err) {
+      window.open(href, '_blank');
+    }
+    this.setState({ sent: true });
+  };
+
+  renderVals() {
+    const circ = 2 * Math.PI * 56; // ~351.86
+    const gaugeOffset = circ * (1 - this.state.score / 100);
+    return {
+      score: this.state.score,
+      soc2: this.state.soc2,
+      evidence: this.state.evidence,
+      gaps: this.state.gaps,
+      soc2W: this.state.soc2 + '%',
+      evidenceW: this.state.evidence + '%',
+      gaugeOffset: gaugeOffset,
+      modalOpen: this.state.modalOpen,
+      sent: this.state.sent,
+      showForm: this.state.modalOpen && !this.state.sent,
+      openModal: this.openModal,
+      closeModal: this.closeModal,
+      stopProp: this.stopProp,
+      submitForm: this.submitForm,
+    };
+  }
+}
+</script>
+</body>
+</html>
